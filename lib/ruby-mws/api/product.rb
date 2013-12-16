@@ -4,8 +4,8 @@ module MWS
     class Product < Base
       def_request :get_matching_product_for_id,
         :verb => :get,
-        :uri => '/Products/2011-01-01',
-        :version => '2011-01-01',
+        :uri => '/Products/2011-10-01',
+        :version => '2011-10-01',
         :lists => {
           :seller_sku => "IdList.Id"
         },
