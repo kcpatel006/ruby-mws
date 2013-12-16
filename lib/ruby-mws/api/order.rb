@@ -40,7 +40,7 @@ module MWS
           :seller_sku => "IdList.Id"
         },
         :mods => [
-          lambda {|r| r.products = r.products.product if r.products}
+          lambda {|r| r.orders = [r.orders.order].flatten}
         ]
     end
 
