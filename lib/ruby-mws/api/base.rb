@@ -49,7 +49,7 @@ module MWS
         query = Query.new params
         resp = self.class.send(params[:verb], query.request_uri)
 
-        @response = if resp.is_a?(Hash)
+        @response = if resp.is_a?(Hash) || resp.as_json.is_a?(Hash)
           Response.parse resp, name, params
         else
           BinaryResponse.parse resp, name, params
